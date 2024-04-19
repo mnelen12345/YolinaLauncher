@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YolinaLauncher</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            background-color: #161616;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            width: 300px;
+            height: 450px;
+            margin: 10px;
+        }
+        #logo {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 250px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <img id="logo" src="{{ url_for('static', filename='img/logo.png') }}" alt="logo">
+    <a href="#" id="giButton" class="button">
+        <img src="{{ url_for('static', filename='img/gi.png') }}" alt="Genshin Impact" width="300px" height="450px">
+    </a>
+    <a href="#" id="hi3rdnButton" class="button">
+        <img src="{{ url_for('static', filename='img/hi3rd.jpeg') }}" alt="Honkai Impact 3rd" width="300px" height="450px">
+    </a>
+    <a href="#" id="hsrButton" class="button">
+        <img src="{{ url_for('static', filename='img/hsr.png') }}" alt="Honkai: Star Rail" width="300px" height="450px">
+    </a>
+    
+    <script>
+        document.getElementById("giButton").addEventListener("click", function() {
+            fetch('/genshin_impact')
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+        });
+        document.getElementById("hsrButton").addEventListener("click", function() {
+            fetch('/honkai_star_rail')
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+        });
+        document.getElementById("hi3rdnButton").addEventListener("click", function() {
+            fetch('/honkai_impact_3rd')
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>

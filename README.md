@@ -32,5 +32,5 @@ python base.py
 
 ## Contributors
 
-- mnelen12345 (@mnelen12345)
-- Mayato (@Mayato3km)
+- [mnelen12345](https://github.com/mnelen12345)
+- [Mayato](https://github.com/Mayato3km)

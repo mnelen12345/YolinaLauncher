@@ -29,3 +29,8 @@ python base.py
 > [!Warning]
 > Each time an image is randomly selected<br>
 > you can view them [here](https://github.com/mnelen12345/YolinaLauncher/tree/main/large_image) (photos 1-9)
+
+## Contributors
+
+- mnelen12345 (@mnelen12345)
+- Mayato (@Mayato3km)
